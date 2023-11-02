@@ -2,9 +2,46 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
-
+div{
+    display: flex;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
 /* Sliding Left */
-
-
+#slidingLeft{
+    margin:2vh 0vh 0vh -9vw;
+    width:10vw;
+    height:5vh;
+    background-color: rgb(0, 0, 0);
+    animation: slideLeft 2s ease 1s 2 normal forwards;
+    border-radius: 5rem;
+}
+#slidingRight{
+    margin:5vh 0vh 0vh 50vw;
+    width:10vw;
+    height:5vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5rem;
+    animation: slideRight 2s ease 0.5s 2 normal forwards;
+}
 /* All keyframes */
+@keyframes slideLeft{
+    from{
+        transform: translateX(-5vw);
+    }
+    to{
+        transform: translateX(20vw);
+    }
+}
+@keyframes slideRight{
+    from{
+        transform: translateX(50vw);
+    }
+    to{
+        transform: translateX(0vw);
+    }
+}
