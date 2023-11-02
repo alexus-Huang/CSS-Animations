@@ -4,6 +4,7 @@
     box-sizing: border-box;
     overflow-x: hidden;
 }
+/* div styling */
 div{
     display: flex;
     color:white;
@@ -11,15 +12,18 @@ div{
     align-items: center;
     font-size: 5rem;
 }
+
 /* Sliding Left */
 #slidingLeft{
     margin:2vh 0vh 0vh -9vw;
     width:10vw;
     height:5vh;
     background-color: rgb(0, 0, 0);
-    animation: slideLeft 2s ease 1s 2 normal forwards;
+    animation: slideLeft 2s ease 0.5s 2 normal forwards;
     border-radius: 5rem;
 }
+
+/* Sliding Right */
 #slidingRight{
     margin:5vh 0vh 0vh 50vw;
     width:10vw;
@@ -28,13 +32,39 @@ div{
     border-radius: 5rem;
     animation: slideRight 2s ease 0.5s 2 normal forwards;
 }
+
+/* Spinning */
+#spinning{
+    margin:10vh 0px 10vh 48.5vw;
+    width: 6vw;
+    height: 11vh;
+    background-color: rgb(197, 65, 65);
+    /* border-radius: 1rem; */
+    /* padding:2rem; */
+    animation: spin 5s linear 1s infinite;
+}
+
+/* Progress Bar */
+#progressBar{
+    margin: 5vh 0px 5vh 10vw;
+    width:0vw;
+    height: 5vh;
+    background-color: rgb(181, 248, 179);
+    animation: progress 10s linear 2s infinite normal forwards;
+}
+#progressBar::before{
+    content: "Progress Bar";
+    color: black;
+}
+
+/* Scale Up */
 /* All keyframes */
 @keyframes slideLeft{
     from{
         transform: translateX(-5vw);
     }
     to{
-        transform: translateX(20vw);
+        transform: translateX(40vw);
     }
 }
 @keyframes slideRight{
@@ -44,4 +74,23 @@ div{
     to{
         transform: translateX(0vw);
     }
+}
+@keyframes spin{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes progress{
+    from{
+        width: 0vw;
+    }
+    to{
+        width: 85vw;
+    }
+}
+@keyframes identifier {
+    
 }
